@@ -1,11 +1,17 @@
 @charset "utf-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 
+:root {
+  --btn-primary: #ff6f0f;
+  --btn-hover: #ff6f0f90;
+}
+
 .hor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 /* HEADER */
 #wrap {
   display: none;
@@ -21,7 +27,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 700px) {
   #wrap {
     display: block;
     width: 100%;
@@ -56,8 +62,11 @@
     transform: scale(0.7);
     margin: 0;
   }
+  header .info-icon-box p {
+    margin-right: 2px;
+  }
   header .info-icon-box img {
-    margin-right: 8px;
+    margin-right: 5px;
   }
   header .info-icon-box img:last-child {
     margin: 0;
@@ -66,6 +75,9 @@
     padding: 20px 16px 0 16px;
     font-size: 18px;
     font-weight: bold;
+  }
+  header .menu-bar img {
+    cursor: pointer;
   }
 
   header .menu-bar .menu-bar__icons img {
@@ -83,6 +95,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    cursor: pointer;
   }
   main .item-list .item-list__img {
     width: 115px;
@@ -113,6 +126,30 @@
     color: #43434380;
     margin: 5px 0;
   }
+  main .write-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffefc1;
+    background: var(--btn-primary);
+    border: 2px solid #ff6f0f;
+    width: 90px;
+    height: 40px;
+    border-radius: 45px;
+    box-shadow: 2px 2px 5px #43434310;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  main .write-btn:hover {
+    background: var(--btn-hover);
+  }
+  main .write-btn img {
+    width: 12px;
+    margin-right: 4px;
+  }
   /* FOOTER */
   footer {
     display: flex;
@@ -125,10 +162,25 @@
     width: 100%;
     font-size: 10px;
     height: 68px;
-    border-top: 1px solid #43434310;
+    border-top: 1px solid #43434350;
   }
   footer div {
     text-align: center;
+    cursor: pointer;
+  }
+  footer div:hover img {
+    animation: upndown 1s ease-in-out;
+  }
+  @keyframes upndown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   footer div img {
     margin-bottom: 8px;
