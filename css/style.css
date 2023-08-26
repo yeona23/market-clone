@@ -1,0 +1,139 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+.hor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* HEADER */
+#wrap {
+  display: none;
+  overflow: hidden;
+}
+
+.media-info-msg {
+  width: 100vw;
+  height: 100vh;
+  background: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 380px) {
+  #wrap {
+    display: block;
+    width: 100%;
+  }
+  header {
+    border-bottom: 1px solid #43434310;
+    font-size: 12px;
+    width: 100%;
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+  }
+  header p {
+    margin-right: 5px;
+  }
+  header .info-bar {
+    padding: 0 20px;
+  }
+  header .info-alert-box {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #666;
+    border-radius: 50%;
+    color: #fff;
+  }
+  header .info-alert-box p {
+    transform: scale(0.7);
+    margin: 0;
+  }
+  header .info-icon-box img {
+    margin-right: 8px;
+  }
+  header .info-icon-box img:last-child {
+    margin: 0;
+  }
+  header .menu-bar {
+    padding: 20px 16px 0 16px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  header .menu-bar .menu-bar__icons img {
+    margin-left: 20px;
+  }
+
+  /* MAIN */
+  main {
+    padding: 0 16px;
+    margin: 90px 0;
+  }
+  main .item-list {
+    padding: 16px 0;
+    border-bottom: 1px solid #43434310;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .item-list .item-list__img {
+    width: 115px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 20px;
+    background: coral;
+  }
+  main .item-list .item-list__img img {
+    width: 130%;
+  }
+  main .item-list .item-list__text {
+    padding-top: 8px;
+  }
+  main .item-list .item-list__text h4 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  main .item-list .item-list__text h5 {
+    font-size: 14px;
+  }
+  main .item-list .item-list__text p {
+    font-size: 12px;
+    color: #43434380;
+    margin: 5px 0;
+  }
+  /* FOOTER */
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 10px;
+    height: 68px;
+    border-top: 1px solid #43434310;
+  }
+  footer div {
+    text-align: center;
+  }
+  footer div img {
+    margin-bottom: 8px;
+  }
+  .media-info-msg {
+    display: none;
+  }
+}
